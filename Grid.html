@@ -6,18 +6,145 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 2500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color:#FF9999;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color:#999999;
+      color:#555;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
 </head>
 <body>
 
 <div class="container-fluid">
-  <h1>Hello World!</h1>
-  <p>Resize the browser window to see the effect.</p>
-  <div class="row">
-    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
-    <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4><b>Ning Blog</b></h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href=http://angsila.cs.buu.ac.th/~58160628/887371/lab03/lab03.html>Home</a></li>
+        <li><a href=http://angsila.cs.buu.ac.th/~58160628/887371/lab03/Grid.html>Grid</a></li>
+        <li><a href=http://angsila.cs.buu.ac.th/~58160628/887371/lab03/form.html>Form</a></li>
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <h4><small>RECENT POSTS</small></h4>
+      <hr>
+      <h2><b><font color=#FF9999>Grid</font></b></h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Ning, Feb 08, 2017.</h5>
+      <h5><span class="label label-danger">Grid</span> <span class="label label-primary">Form</span></h5><br>
+      <p>Bootstrap's grid system allows up to 12 columns across the page.
+If you do not want to use all 12 columns individually, you can group the columns together to create wider columns:.</p>
+      <br>
+      <img src="Grid.png">
+      <p>Bootstrap's grid system is responsive, and the columns will re-arrange automatically depending on the screen size.</p>
+      <p>Grid Classes</p>
+<p>The Bootstrap grid system has four classes:</p>
+<p>-xs (for phones)</p>
+<p>-sm (for tablets)</p>
+<p>-md (for desktops)</p>
+<p>-lg (for larger desktops)</p>
+<p>The classes above can be combined to create more dynamic and flexible layouts.</p>
+<p><b><h3>Basic Structure of a Bootstrap Grid</h3></b></p>
+<p>The following is a basic structure of a Bootstrap grid:</p>
+ <img src="Grid1.png">  
+<P>First; create a row (< div class="row" >). Then, add the desired number of columns (tags with appropriate .col-*-* classes). Note that numbers in .col-*-* should always add up to 12 for each row.
+Below we have collected some examples of basic Bootstrap grid layouts.</P>
+<p><h3><b>Three Equal Columns</b></h3></p>
+<p><h3><b>Example</b></h3></p>
+<div class="container-fluid">
+<div class="row">
+    <div class="col-sm-4" style="background-color:#6699FF;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:#996699;">.col-sm-4</div>
     <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
   </div>
 </div>
+<p>The following example shows how to get a three equal-width columns starting at tablets and scaling to large desktops. On mobile phones, the columns will automatically stack:</p>
+<p><b><h3>Code</h3></b></p>
+<img src="Grid2.png">
+<p><b><h3>Two Unequal Columns</h3></b></p>
+<p><h3><b>Example</b></h3></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4" style="background-color:#999966;">.col-sm-4</div>
+    <div class="col-sm-8" style="background-color:#CC3366;">.col-sm-8</div>
+  </div>
+</div>
+<p>The following example shows how to get two various-width columns starting at tablets and scaling to large desktops:</p><br>
+<p><b><h3>Code</h3></b></p>
+<img src="Grid3.png">
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br><br>
+       <p><span class="badge">2</span> Comments:</p><br>
+      
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <a href="https://www.facebook.com/oksatang?fref=ts"> <img src="tung.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Tung<small>Feb 08, 2017, 9:12 PM</small></h4>
+          <p>เยี่ยม.</p></a>
+          <br>
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="w.png" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>su<small>Feb 08, 2017, 9.30 PM</small></h4>
+          <p>Good!.</p>
+          <br>
+          <p><span class="badge">1</span> Comment:</p><br>
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="y.png" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-xs-10">
+              <h4>ying<small>Feb 08, 2017, 10.00 PM</small></h4>
+              <p>WOW!</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+           </div>
+        </div>
+      </div>
+  <footer class="container-fluid">
+  <p><b><h3>Phuangpet  Ketkeaw  58160628</h3></b></p>
+  </footer>
 
 </body>
 </html>
